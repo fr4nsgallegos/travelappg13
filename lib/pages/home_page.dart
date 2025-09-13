@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travelappg13/widgets/card_2.dart';
+import 'package:travelappg13/widgets/custom_animated_drawer.dart';
 import 'package:travelappg13/widgets/destination_card_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -54,52 +55,69 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-        appBar: AppBar(
-          title: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(Icons.rocket, color: Colors.cyan),
-              SizedBox(width: 8),
-              Text("Discount Tour"),
-            ],
-          ),
-          centerTitle: true,
-        ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: ListView(
-            children: [
-              Text(
-                "Find the best tour",
-                style: TextStyle(fontSize: 26, fontWeight: FontWeight.w400),
+        // appBar: AppBar(
+        //   title: Row(
+        //     mainAxisSize: MainAxisSize.min,
+        //     children: [
+        //       Icon(Icons.rocket, color: Colors.cyan),
+        //       SizedBox(width: 8),
+        //       Text("Discount Tour"),
+        //     ],
+        //   ),
+        //   centerTitle: true,
+        // ),
+        body: Stack(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: ListView(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.rocket, color: Colors.cyan),
+                        SizedBox(width: 8),
+                        Text("Discount Tour"),
+                      ],
+                    ),
+                  ),
+                  Text(
+                    "Find the best tour",
+                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.w400),
+                  ),
+                  Text(
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has",
+                  ),
+                  SizedBox(height: 16),
+                  Text(
+                    "Country",
+                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.w400),
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        DestinationCardWidget(),
+                        DestinationCardWidget(),
+                        DestinationCardWidget(),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 16),
+                  Card2(),
+                  Card2(),
+                  Card2(),
+                  Card2(),
+                  Card2(),
+                  Card2(),
+                ],
               ),
-              Text(
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has",
-              ),
-              SizedBox(height: 16),
-              Text(
-                "Country",
-                style: TextStyle(fontSize: 26, fontWeight: FontWeight.w400),
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    DestinationCardWidget(),
-                    DestinationCardWidget(),
-                    DestinationCardWidget(),
-                  ],
-                ),
-              ),
-              SizedBox(height: 16),
-              Card2(),
-              Card2(),
-              Card2(),
-              Card2(),
-              Card2(),
-              Card2(),
-            ],
-          ),
+            ),
+            CustomAnimatedDrawer(),
+          ],
         ),
       ),
     );
