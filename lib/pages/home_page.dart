@@ -117,36 +117,41 @@ class HomePage extends StatelessWidget {
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
-                        Stack(
-                          clipBehavior: Clip.none,
-                          children: [
-                            Positioned(
-                              right: 40,
-                              child: CircleAvatar(
-                                radius: 16,
-                                backgroundImage: NetworkImage(
-                                  "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?_gl=1*1xbsusj*_ga*ODI4MzUxMDczLjE3MjI2NDc0MzI.*_ga_8JE65Q40S6*czE3NTc3MjQ0NjIkbzcwJGcxJHQxNzU3NzI1NjA1JGozMSRsMCRoMA..",
+                        SizedBox(
+                          height: 40,
+                          width: 80,
+                          child: Stack(
+                            clipBehavior: Clip.none,
+                            children: [
+                              Positioned(
+                                right: 0,
+                                child: CircleAvatar(
+                                  radius: 16,
+                                  backgroundImage: NetworkImage(
+                                    "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?_gl=1*1xbsusj*_ga*ODI4MzUxMDczLjE3MjI2NDc0MzI.*_ga_8JE65Q40S6*czE3NTc3MjQ0NjIkbzcwJGcxJHQxNzU3NzI1NjA1JGozMSRsMCRoMA..",
+                                  ),
                                 ),
                               ),
-                            ),
-                            Positioned(
-                              right: 20,
-                              child: CircleAvatar(
-                                radius: 16,
-                                backgroundImage: NetworkImage(
-                                  "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?_gl=1*1e3a13f*_ga*ODI4MzUxMDczLjE3MjI2NDc0MzI.*_ga_8JE65Q40S6*czE3NTc3MjQ0NjIkbzcwJGcxJHQxNzU3NzI1NTg3JGo0OSRsMCRoMA..",
+                              Positioned(
+                                right: 20,
+                                child: CircleAvatar(
+                                  radius: 16,
+                                  backgroundImage: NetworkImage(
+                                    "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?_gl=1*1e3a13f*_ga*ODI4MzUxMDczLjE3MjI2NDc0MzI.*_ga_8JE65Q40S6*czE3NTc3MjQ0NjIkbzcwJGcxJHQxNzU3NzI1NTg3JGo0OSRsMCRoMA..",
+                                  ),
                                 ),
                               ),
-                            ),
-                            Positioned(
-                              child: CircleAvatar(
-                                radius: 16,
-                                backgroundImage: NetworkImage(
-                                  "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?_gl=1*cmhs3e*_ga*ODI4MzUxMDczLjE3MjI2NDc0MzI.*_ga_8JE65Q40S6*czE3NTc3MjQ0NjIkbzcwJGcxJHQxNzU3NzI1NjEyJGoyNCRsMCRoMA..",
+                              Positioned(
+                                right: 40,
+                                child: CircleAvatar(
+                                  radius: 16,
+                                  backgroundImage: NetworkImage(
+                                    "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?_gl=1*cmhs3e*_ga*ODI4MzUxMDczLjE3MjI2NDc0MzI.*_ga_8JE65Q40S6*czE3NTc3MjQ0NjIkbzcwJGcxJHQxNzU3NzI1NjEyJGoyNCRsMCRoMA..",
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ],
                     ),
