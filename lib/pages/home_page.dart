@@ -52,7 +52,82 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-        appBar: AppBar(title: Text("Discount Tour"), centerTitle: true),
+        appBar: AppBar(
+          title: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.rocket, color: Colors.cyan),
+              SizedBox(width: 8),
+              Text("Discount Tour"),
+            ],
+          ),
+          centerTitle: true,
+        ),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Find the best tour",
+                style: TextStyle(fontSize: 26, fontWeight: FontWeight.w400),
+              ),
+              Text(
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has",
+              ),
+              SizedBox(height: 16),
+              Text(
+                "Country",
+                style: TextStyle(fontSize: 26, fontWeight: FontWeight.w400),
+              ),
+              Container(
+                padding: EdgeInsets.all(16),
+                width: 170,
+                height: 220,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  image: DecorationImage(
+                    colorFilter: ColorFilter.mode(
+                      Colors.black.withOpacity(0.4),
+                      BlendMode.srcATop,
+                    ),
+                    image: NetworkImage(
+                      "https://images.pexels.com/photos/3538245/pexels-photo-3538245.jpeg?_gl=1*1vovak0*_ga*ODI4MzUxMDczLjE3MjI2NDc0MzI.*_ga_8JE65Q40S6*czE3NTc3MjQ0NjIkbzcwJGcxJHQxNzU3NzI0NTA1JGoxNyRsMCRoMA..",
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.symmetric(
+                            vertical: 8,
+                            horizontal: 12,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.45),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Text(
+                            "NEW",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text("Thailand", style: TextStyle(color: Colors.white)),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
