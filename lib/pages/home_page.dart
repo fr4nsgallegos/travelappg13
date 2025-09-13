@@ -67,8 +67,7 @@ class HomePage extends StatelessWidget {
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: ListView(
             children: [
               Text(
                 "Find the best tour",
@@ -93,6 +92,9 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 16),
+              Card2(),
+              Card2(),
+              Card2(),
               Card2(),
               Card2(),
               Card2(),
