@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travelappg13/widgets/card_2.dart';
 import 'package:travelappg13/widgets/custom_animated_drawer.dart';
+import 'package:travelappg13/widgets/custom_expansion_tile.dart';
 import 'package:travelappg13/widgets/destination_card_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -52,20 +53,28 @@ class HomePage extends StatelessWidget {
                   ListTile(leading: Icon(Icons.person), title: Text("Perfil")),
                 ],
               ),
+              CustomExpansionTile2(
+                title: "Opciones",
+                children: [
+                  ListTile(title: Text("Opción1")),
+                  ListTile(title: Text("Opción2")),
+                  ListTile(title: Text("Opción3")),
+                ],
+              ),
             ],
           ),
         ),
-        // appBar: AppBar(
-        //   title: Row(
-        //     mainAxisSize: MainAxisSize.min,
-        //     children: [
-        //       Icon(Icons.rocket, color: Colors.cyan),
-        //       SizedBox(width: 8),
-        //       Text("Discount Tour"),
-        //     ],
-        //   ),
-        //   centerTitle: true,
-        // ),
+        appBar: AppBar(
+          title: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.rocket, color: Colors.cyan),
+              SizedBox(width: 8),
+              Text("Discount Tour"),
+            ],
+          ),
+          centerTitle: true,
+        ),
         body: Stack(
           children: [
             Padding(
