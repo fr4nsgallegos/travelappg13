@@ -22,9 +22,14 @@ class HomePage extends StatelessWidget {
                 decoration: BoxDecoration(color: Colors.indigo),
                 child: Align(
                   alignment: Alignment.center,
-                  child: Text(
-                    "Jhonny Gallegos Mendoza",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  child: Column(
+                    children: [
+                      FlutterLogo(size: 75),
+                      Text(
+                        "Jhonny Gallegos Mendoza",
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -33,6 +38,16 @@ class HomePage extends StatelessWidget {
               ListTile(
                 leading: Icon(Icons.settings_outlined),
                 title: Text("Configuración"),
+              ),
+              Divider(),
+              ListTile(leading: Icon(Icons.person), title: Text("Perfil")),
+              ExpansionTile(
+                title: Text("Ajustes"),
+                leading: Icon(Icons.settings_outlined),
+                children: [
+                  ListTile(leading: Icon(Icons.home), title: Text("Inicio")),
+                  ListTile(leading: Icon(Icons.person), title: Text("Perfil")),
+                ],
               ),
             ],
           ),
