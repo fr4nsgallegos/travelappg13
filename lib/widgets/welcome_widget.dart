@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:travelappg13/pages/home_page.dart';
 
 class WelcomeWidget extends StatelessWidget {
@@ -15,6 +16,11 @@ class WelcomeWidget extends StatelessWidget {
     required this.bgColor,
     this.showButton = false,
   });
+
+  Future<void> setYaInicio() async {
+    SharedPreferences _prefs = await SharedPreferences.getInstance();
+    await _prefs.setBool("yaInicio", true);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +56,7 @@ class WelcomeWidget extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 40),
                   child: ElevatedButton(
                     onPressed: () {
+                      setYaInicio();
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => HomePage()),
